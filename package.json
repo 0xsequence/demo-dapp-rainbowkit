@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "0xsequence": "^0.40.6",
-    "0xsequence/rainbowkit-plugin": "file:../rainbowkit-plugin",
+    "0xsequence/rainbowkit-plugin": "1.0.0",
     "@0xsequence/ethauth": "0.7.0",
     "@radix-ui/colors": "^0.1.8",
     "@rainbow-me/rainbowkit": "^0.7.1",

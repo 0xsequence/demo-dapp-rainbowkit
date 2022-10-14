@@ -12,6 +12,7 @@ import {
   metaMaskWallet,
   injectedWallet,
   rainbowWallet,
+  walletConnectWallet
 } from '@rainbow-me/rainbowkit/wallets'
 
 import {
@@ -38,6 +39,7 @@ const App = () => {
         sequenceWallet({ chains, shimDisconnect: true, appName: 'Demo App' }),
         metaMaskWallet({ chains, shimDisconnect: true }),
         rainbowWallet({ chains }),
+        walletConnectWallet({ chains }),
         injectedWallet({ chains, shimDisconnect: true })
       ]
     }

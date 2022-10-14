@@ -1,9 +1,9 @@
 # Demo Dapp + RainbowKit
 =====================
 
-Dapp example on how to use Sequence Wallet with [Web3Modal](https://github.com/Web3Modal/web3modal). Demonstrates how to connect a wallet, sign messages and send transactions.
+Dapp example on how to use Sequence Wallet with [RainbowKit](https://www.rainbowkit.com). Demonstrates how to connect a wallet, sign messages and send transactions.
 
-Try this dapp at: [https://0xsequence.github.io/demo-dapp-web3modal](https://0xsequence.github.io/demo-dapp-web3modal)
+Try this dapp at: [https://0xsequence.github.io/demo-dapp-rainbowkit](https://0xsequence.github.io/demo-dapp-rainbowkit)
 
 For complete documentation on Sequence, please see: [https://docs.sequence.build](https://docs.sequence.build)
 
@@ -16,8 +16,8 @@ For complete documentation on Sequence, please see: [https://docs.sequence.build
 
 ## Development
 
-See https://github.com/0xsequence/demo-dapp-web3modal/blob/master/src/App.tsx for the source
-usage for a variety of functions. be sure t open your browser's dev inspector to see output.
+See https://github.com/0xsequence/demo-dapp-rainbowkit/blob/master/src/App.tsx for the source
+usage for a variety of functions. Be sure to open your browser's dev inspector to see output.
 Think of these functions as a "cookbook" for how you can perform these functions in your dapps.
 
 Also note, sequence.js is built on top of ethers.js, and is API-compatible. Finally, this example
@@ -28,7 +28,7 @@ which is compatible with 1193 providers.
 
 ## Screenshots
 
-**Connect Wallet with Web3Modal with Sequence + Metamask + WalletConnect options:**
+**Connect Wallet with RainbowKit with Sequence + Metamask + WalletConnect options:**
 
 ![Connect Wallet](./screenshots/screen-open.png)
 
@@ -36,7 +36,6 @@ which is compatible with 1193 providers.
 **Execute common wallet functions:**
 
 ![Wallet functions](./screenshots/screen-txn.png)
-
 
 
 ## LICENSE

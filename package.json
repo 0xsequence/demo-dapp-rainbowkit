@@ -1,6 +1,6 @@
 {
-  "name": "demo-dapp-web3modal",
-  "description": "Ethereum Demo Dapp + Web3Modal built on Sequence stack",
+  "name": "demo-dapp-rainbowkit",
+  "description": "Ethereum Demo Dapp + RainbowKit built on Sequence stack",
   "version": "0.1.0",
   "private": true,
   "homepage": "demo-dapp-rainbowkit",

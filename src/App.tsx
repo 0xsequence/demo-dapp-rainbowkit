@@ -36,7 +36,7 @@ const App = () => {
     {
       groupName: 'Recommended',
       wallets: [
-        sequenceWallet({ chains, shimDisconnect: true, appName: 'Demo App' }),
+        sequenceWallet({ chains, shimDisconnect: true, connect: { app: 'Demo app', networkId: 137 } }),
         metaMaskWallet({ chains, shimDisconnect: true }),
         rainbowWallet({ chains }),
         walletConnectWallet({ chains }),

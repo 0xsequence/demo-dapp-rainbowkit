@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/demo-dapp-rainbowkit/static/css/main.e1e6a3b0.css",
-    "main.js": "/demo-dapp-rainbowkit/static/js/main.6f49fbd1.js",
+    "main.js": "/demo-dapp-rainbowkit/static/js/main.b8d891b5.js",
     "static/js/841.40902721.chunk.js": "/demo-dapp-rainbowkit/static/js/841.40902721.chunk.js",
     "static/js/888.d195de58.chunk.js": "/demo-dapp-rainbowkit/static/js/888.d195de58.chunk.js",
     "static/js/624.0e59e361.chunk.js": "/demo-dapp-rainbowkit/static/js/624.0e59e361.chunk.js",
@@ -37,7 +37,7 @@
     "static/media/logo.svg": "/demo-dapp-rainbowkit/static/media/logo.5657ba9d4ec036d9c234b597390120fa.svg",
     "index.html": "/demo-dapp-rainbowkit/index.html",
     "main.e1e6a3b0.css.map": "/demo-dapp-rainbowkit/static/css/main.e1e6a3b0.css.map",
-    "main.6f49fbd1.js.map": "/demo-dapp-rainbowkit/static/js/main.6f49fbd1.js.map",
+    "main.b8d891b5.js.map": "/demo-dapp-rainbowkit/static/js/main.b8d891b5.js.map",
     "841.40902721.chunk.js.map": "/demo-dapp-rainbowkit/static/js/841.40902721.chunk.js.map",
     "888.d195de58.chunk.js.map": "/demo-dapp-rainbowkit/static/js/888.d195de58.chunk.js.map",
     "624.0e59e361.chunk.js.map": "/demo-dapp-rainbowkit/static/js/624.0e59e361.chunk.js.map",
@@ -71,6 +71,6 @@
   },
   "entrypoints": [
     "static/css/main.e1e6a3b0.css",
-    "static/js/main.6f49fbd1.js"
+    "static/js/main.b8d891b5.js"
   ]
 }

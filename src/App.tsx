@@ -7,7 +7,7 @@ import {
 
 } from '@rainbow-me/rainbowkit';
 
-import { sequenceWallet } from '0xsequence/rainbowkit-plugin'
+import { sequenceWallet } from '@0xsequence/rainbowkit-plugin'
 import {
   metaMaskWallet,
   injectedWallet,

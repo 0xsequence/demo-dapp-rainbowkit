@@ -1,5 +1,5 @@
-# Demo Dapp + RainbowKit
-=====================
+Demo Dapp + RainbowKit
+======================
 
 Dapp example on how to use Sequence Wallet with [RainbowKit](https://www.rainbowkit.com). Demonstrates how to connect a wallet, sign messages and send transactions.
 

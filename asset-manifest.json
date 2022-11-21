@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/demo-dapp-rainbowkit/static/css/main.e1e6a3b0.css",
-    "main.js": "/demo-dapp-rainbowkit/static/js/main.b8d891b5.js",
+    "main.js": "/demo-dapp-rainbowkit/static/js/main.caec5581.js",
     "static/js/841.40902721.chunk.js": "/demo-dapp-rainbowkit/static/js/841.40902721.chunk.js",
     "static/js/888.d195de58.chunk.js": "/demo-dapp-rainbowkit/static/js/888.d195de58.chunk.js",
     "static/js/624.0e59e361.chunk.js": "/demo-dapp-rainbowkit/static/js/624.0e59e361.chunk.js",
@@ -33,11 +33,11 @@
     "static/js/958.d9680675.chunk.js": "/demo-dapp-rainbowkit/static/js/958.d9680675.chunk.js",
     "static/js/787.2c4cc0e8.chunk.js": "/demo-dapp-rainbowkit/static/js/787.2c4cc0e8.chunk.js",
     "static/js/419.485ca342.chunk.js": "/demo-dapp-rainbowkit/static/js/419.485ca342.chunk.js",
-    "static/js/163.446ebc50.chunk.js": "/demo-dapp-rainbowkit/static/js/163.446ebc50.chunk.js",
+    "static/js/163.aa9039a8.chunk.js": "/demo-dapp-rainbowkit/static/js/163.aa9039a8.chunk.js",
     "static/media/logo.svg": "/demo-dapp-rainbowkit/static/media/logo.5657ba9d4ec036d9c234b597390120fa.svg",
     "index.html": "/demo-dapp-rainbowkit/index.html",
     "main.e1e6a3b0.css.map": "/demo-dapp-rainbowkit/static/css/main.e1e6a3b0.css.map",
-    "main.b8d891b5.js.map": "/demo-dapp-rainbowkit/static/js/main.b8d891b5.js.map",
+    "main.caec5581.js.map": "/demo-dapp-rainbowkit/static/js/main.caec5581.js.map",
     "841.40902721.chunk.js.map": "/demo-dapp-rainbowkit/static/js/841.40902721.chunk.js.map",
     "888.d195de58.chunk.js.map": "/demo-dapp-rainbowkit/static/js/888.d195de58.chunk.js.map",
     "624.0e59e361.chunk.js.map": "/demo-dapp-rainbowkit/static/js/624.0e59e361.chunk.js.map",
@@ -67,10 +67,10 @@
     "958.d9680675.chunk.js.map": "/demo-dapp-rainbowkit/static/js/958.d9680675.chunk.js.map",
     "787.2c4cc0e8.chunk.js.map": "/demo-dapp-rainbowkit/static/js/787.2c4cc0e8.chunk.js.map",
     "419.485ca342.chunk.js.map": "/demo-dapp-rainbowkit/static/js/419.485ca342.chunk.js.map",
-    "163.446ebc50.chunk.js.map": "/demo-dapp-rainbowkit/static/js/163.446ebc50.chunk.js.map"
+    "163.aa9039a8.chunk.js.map": "/demo-dapp-rainbowkit/static/js/163.aa9039a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1e6a3b0.css",
-    "static/js/main.b8d891b5.js"
+    "static/js/main.caec5581.js"
   ]
 }

@@ -16,17 +16,17 @@ import {
 } from '@rainbow-me/rainbowkit/wallets'
 
 import {
-  chain,
   configureChains,
   createClient,
   WagmiConfig,
 } from 'wagmi';
+import { mainnet, polygon, optimism, arbitrum } from '@wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public';
 import Demo from './Demo'
 
 const App = () => {
   const { chains, provider } = configureChains(
-    [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+    [mainnet, polygon, optimism, arbitrum],
     [
       publicProvider()
     ]

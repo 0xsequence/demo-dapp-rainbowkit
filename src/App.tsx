@@ -1,6 +1,9 @@
 import React from 'react'
 import '@rainbow-me/rainbowkit/styles.css';
 
+import { ThemeProvider } from '@0xsequence/design-system'
+import '@0xsequence/design-system/styles.css'
+
 import {
   RainbowKitProvider,
   connectorsForWallets,
@@ -53,11 +56,13 @@ const App = () => {
 
 
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
-        <Demo />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <ThemeProvider>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains}>
+          <Demo />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </ThemeProvider>
   )
 }
 

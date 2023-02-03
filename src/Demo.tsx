@@ -260,7 +260,7 @@ const App = () => {
         <Image height="10" alt="logo" src={logoUrl} />
       </Box>
 
-      <Box>
+      <Box  marginBottom="4">
         <Text color="text100" variant="large">Demo Dapp + RainbowKit</Text>
       </Box>
 

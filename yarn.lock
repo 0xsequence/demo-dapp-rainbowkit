@@ -135,10 +135,10 @@
     eventemitter2 "^6.4.5"
     webextension-polyfill "^0.10.0"
 
-"@0xsequence/rainbowkit-plugin@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@0xsequence/rainbowkit-plugin/-/rainbowkit-plugin-1.0.4.tgz#4e635f7cfd78c1d1aa5a0ca3e2204f57abcbdebe"
-  integrity sha512-koiBArL3GdyDjFxUJ76vEw2QJEpxMSydBG0fWaXhyyvCfdTL2yi90Bxi/nh2i+q+12YkRTGar6oQBsM8BttTTA==
+"@0xsequence/rainbowkit-plugin@^1.0.5":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@0xsequence/rainbowkit-plugin/-/rainbowkit-plugin-1.0.6.tgz#f9e4ee41ffe59b6ccb3edb82a2b25ce56e8fe125"
+  integrity sha512-4l6SIj8af+K7RTc+cy43aU4WbAZqO6KGj4+KvIyaMcwUVE7wZVLVsrPRD58REtZOnz0F61051Gm2FeNWqOp5Sg==
 
 "@0xsequence/relayer@^0.43.14":
   version "0.43.14"
@@ -165,6 +165,13 @@
   version "0.43.14"
   resolved "https://registry.yarnpkg.com/@0xsequence/utils/-/utils-0.43.14.tgz#3fb1df71b5f00a3035cff7286bbe5c8ad7ac551e"
   integrity sha512-Yo9h7M55U6DCU2uq20vr/RiDw8AxXVbUN4A95WbvSnyHV0pXT+t1L2ROZEKvj12ynG1Lc0rN/jSbZ7ZBlpv7+w==
+  dependencies:
+    js-base64 "^3.7.2"
+
+"@0xsequence/utils@^0.43.26":
+  version "0.43.26"
+  resolved "https://registry.yarnpkg.com/@0xsequence/utils/-/utils-0.43.26.tgz#221d518da77badacaa7934af1b2c00dc26fbc8cb"
+  integrity sha512-952LB3mQO4qwA7USdl+75vnkuiiYuCFZ61J49T/jib7Oef/qM9JSlYEDBrZBB6DVtXAEH8zdKLjcewCmc+H2rg==
   dependencies:
     js-base64 "^3.7.2"
 

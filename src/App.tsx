@@ -42,7 +42,10 @@ const App = () => {
         sequenceWallet({ chains, connect: { app: 'Demo app', networkId: 137 } }),
         metaMaskWallet({ chains, shimDisconnect: true }),
         rainbowWallet({ chains }),
-        walletConnectWallet({ chains }),
+        walletConnectWallet({
+          chains,
+          projectId: '244ab38f5571af5263358fc67131697d',
+        }),
         injectedWallet({ chains, shimDisconnect: true })
       ]
     }

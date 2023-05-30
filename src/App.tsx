@@ -20,7 +20,7 @@ import {
 
 import {
   configureChains,
-  createClient,
+  createConfig,
   WagmiConfig,
 } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum } from '@wagmi/chains'
@@ -28,7 +28,7 @@ import { publicProvider } from 'wagmi/providers/public';
 import Demo from './Demo'
 
 const App = () => {
-  const { chains, provider } = configureChains(
+  const { chains, publicClient, webSocketPublicClient } = configureChains(
     [mainnet, polygon, optimism, arbitrum],
     [
       publicProvider()
@@ -51,16 +51,16 @@ const App = () => {
     }
   ])
   
-  const wagmiClient = createClient({
+  const wagmiConfig = createConfig({
     autoConnect: true,
     connectors,
-    provider
+    publicClient,
+    webSocketPublicClient
   })
-
 
   return (
     <ThemeProvider>
-      <WagmiConfig client={wagmiClient}>
+      <WagmiConfig config={wagmiConfig}>
         <RainbowKitProvider chains={chains}>
           <Demo />
         </RainbowKitProvider>

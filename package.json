@@ -19,7 +19,7 @@
     "@0xsequence/ethauth": "^0.8.1",
     "@0xsequence/rainbowkit-plugin": "^1.1.0",
     "@0xsequence/utils": "^0.43.26",
-    "@rainbow-me/rainbowkit": "^1.0.1",
+    "@rainbow-me/rainbowkit": "^1.0.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

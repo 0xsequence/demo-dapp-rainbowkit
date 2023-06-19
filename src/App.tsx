@@ -35,17 +35,19 @@ const App = () => {
     ]
   );
 
+  const walletConnectProjectId = 'ecf05e6e910a7006159c69f03dafbaeb'
+
   const connectors = connectorsForWallets([
     {
       groupName: 'Recommended',
       wallets: [
         sequenceWallet({ chains, connect: { app: 'Demo app', networkId: 137 } }),
-        metaMaskWallet({ chains, shimDisconnect: true }),
-        // rainbowWallet({ chains }),
-        // walletConnectWallet({
-        //   chains,
-        //   projectId: '244ab38f5571af5263358fc67131697d',
-        // }),
+        metaMaskWallet({ chains, projectId: walletConnectProjectId, shimDisconnect: true }),
+        rainbowWallet({ chains, projectId: walletConnectProjectId }),
+        walletConnectWallet({
+          chains,
+          projectId: walletConnectProjectId,
+        }),
         injectedWallet({ chains, shimDisconnect: true })
       ]
     }

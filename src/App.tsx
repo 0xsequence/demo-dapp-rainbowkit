@@ -23,13 +23,13 @@ import {
   createClient,
   WagmiConfig,
 } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum } from '@wagmi/chains'
+import { mainnet, polygon, optimism, arbitrum, polygonMumbai } from '@wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public';
 import Demo from './Demo'
 
 const App = () => {
   const { chains, provider } = configureChains(
-    [mainnet, polygon, optimism, arbitrum],
+    [mainnet, polygon, optimism, arbitrum, polygonMumbai],
     [
       publicProvider()
     ]
@@ -39,7 +39,7 @@ const App = () => {
     {
       groupName: 'Recommended',
       wallets: [
-        sequenceWallet({ chains, connect: { app: 'Demo app', networkId: 137 } }),
+        sequenceWallet({ chains, connect: { app: 'Demo app', networkId: 1 } }),
         metaMaskWallet({ chains, shimDisconnect: true }),
         // rainbowWallet({ chains }),
         // walletConnectWallet({

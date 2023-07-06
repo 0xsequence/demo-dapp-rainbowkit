@@ -41,7 +41,16 @@ const App = () => {
     {
       groupName: 'Recommended',
       wallets: [
-        sequenceWallet({ chains, connect: { app: 'Demo app', networkId: 137 } }),
+        sequenceWallet({
+          chains,
+          connect: {
+            app: 'Demo app',
+            networkId: 137,
+          },
+          // providerConfig: {
+          //   walletAppURL: 'https://dev.sequence.app'
+          // }
+        }),
         metaMaskWallet({ chains, projectId: walletConnectProjectId, shimDisconnect: true }),
         rainbowWallet({ chains, projectId: walletConnectProjectId }),
         walletConnectWallet({

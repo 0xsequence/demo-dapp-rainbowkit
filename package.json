@@ -17,7 +17,7 @@
     "0xsequence": "^0.0.0-20230704142612",
     "@0xsequence/design-system": "^0.1.107",
     "@0xsequence/ethauth": "^0.8.1",
-    "@0xsequence/rainbowkit-plugin": "^1.1.0",
+    "@0xsequence/rainbowkit-plugin": "1.1.1-beta.1",
     "@0xsequence/utils": "^0.0.0-20230704142612",
     "@rainbow-me/rainbowkit": "^1.0.2",
     "@testing-library/jest-dom": "^5.16.2",

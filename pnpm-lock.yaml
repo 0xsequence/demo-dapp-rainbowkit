@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.8.1
     version: 0.8.1(ethers@5.7.2)
   '@0xsequence/rainbowkit-plugin':
-    specifier: ^1.1.0
-    version: 1.1.0(0xsequence@0.0.0-20230704142612)(@rainbow-me/rainbowkit@1.0.2)(ethers@5.7.2)(typescript@4.5.5)(wagmi@1.0.0)
+    specifier: 1.1.1-beta.1
+    version: 1.1.1-beta.1(0xsequence@0.0.0-20230704142612)(@rainbow-me/rainbowkit@1.0.2)(ethers@5.7.2)(typescript@4.5.5)(wagmi@1.0.0)
   '@0xsequence/utils':
     specifier: ^0.0.0-20230704142612
     version: 0.0.0-20230704142612(ethers@5.7.2)
@@ -295,10 +295,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@0xsequence/rainbowkit-plugin@1.1.0(0xsequence@0.0.0-20230704142612)(@rainbow-me/rainbowkit@1.0.2)(ethers@5.7.2)(typescript@4.5.5)(wagmi@1.0.0):
-    resolution: {integrity: sha512-X5nC9U5gf6k8NbN9xmYWYEbf9Gfw9Uh6u/DRc7l+6vLN7XLNUPgSr3tCy7zt6IbhjraBYw0kEbCMYP9wNsOMxA==}
+  /@0xsequence/rainbowkit-plugin@1.1.1-beta.1(0xsequence@0.0.0-20230704142612)(@rainbow-me/rainbowkit@1.0.2)(ethers@5.7.2)(typescript@4.5.5)(wagmi@1.0.0):
+    resolution: {integrity: sha512-50r6hBIB77JYC+nAuZ9eXFjLbKYSJSQsy7Pq1Xf6CmcZPo0f1iiiARCF8hLzr+Hs3HG6rX4r9MJpy2r8+3LtYQ==}
     peerDependencies:
-      0xsequence: '>=0.43.0'
+      0xsequence: '>=0.0.0-20230704142612'
       '@rainbow-me/rainbowkit': '>=1.0.0'
       ethers: '>=5.5'
       wagmi: '>=1.0.0'

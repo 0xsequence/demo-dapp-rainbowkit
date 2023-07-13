@@ -23,13 +23,13 @@ import {
   createConfig,
   WagmiConfig,
 } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum } from '@wagmi/chains'
+import { mainnet, polygon, optimism, arbitrum, polygonMumbai } from '@wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public';
 import Demo from './Demo'
 
 const App = () => {
   const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [mainnet, polygon, optimism, arbitrum],
+    [mainnet, polygon, optimism, arbitrum, polygonMumbai],
     [
       publicProvider()
     ]

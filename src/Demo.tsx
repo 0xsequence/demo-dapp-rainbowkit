@@ -147,11 +147,32 @@ const App = () => {
   
       addNewConsoleLine(`signature: ${sig}`)
 
-      const isValid = await publicClient.verifyMessage({
-        address: account,
+      // get networkRpcUrl from walletClient, or set it yourself
+      const networkRpcUrl = walletClient.chain.rpcUrls.default.http[0]
+
+      const rpcProvider = new ethers.providers.JsonRpcProvider(networkRpcUrl)
+      const web3Provider = new sequence.provider.Web3Provider(rpcProvider)
+
+      // We use the sequence.utils.isValidMessageSignature method to verify signatures
+      // which works on Metamask, WalletConnect, Sequence, and any EOA / Smart wallet :)
+      // This single method can verify signatures from any kind of wallet.
+      const isValid = await sequence.utils.isValidMessageSignature(
+        account,
         message,
-        signature: sig
-      })
+        sig,
+        web3Provider
+      )
+
+      // NOTE: this method will not work with 6492 verification, so we recommend
+      // to use the method below. We've left the code below here as a reference,
+      // as you may find it in wagmi/rainbowkit docs, but to support smart wallets too
+      // we recommend to use the sequence utils method above.
+      //
+      // const isValid = await publicClient.verifyMessage({
+      //   address: account,
+      //   message,
+      //   signature: sig
+      // })
 
       console.log('isValid?', isValid)
   

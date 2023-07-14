@@ -47,6 +47,11 @@ const App = () => {
             app: 'Demo app',
             networkId: 137,
           },
+
+          // EIP6492 can be enabled to allow signing messages
+          // without deploying the wallet first
+          // useEIP6492: true,
+
           // providerConfig: {
           //   walletAppURL: 'https://dev.sequence.app'
           // }

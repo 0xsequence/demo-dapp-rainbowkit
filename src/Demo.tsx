@@ -15,6 +15,7 @@ import { configureLogger } from '@0xsequence/utils'
 import { Group } from './components/Group'
 import { Button } from './components/Button'
 import { Console } from './components/Console'
+import { useSequenceEIP6492 } from '@0xsequence/rainbowkit-plugin'
 
 configureLogger({ logLevel: 'DEBUG' })
 
@@ -106,6 +107,50 @@ const App = () => {
     }
   }
 
+  const signMessageEIP6492 = async () => {
+    try {
+      resetConsole()
+
+      const message = `This signature is compatible with EIP-6492, this means that it can be verified by a smart contract wallet like Sequence, without having to deploy anything onchain.`
+  
+      const [account] = await walletClient.getAddresses()
+
+      // Enable EIP-6492
+      useSequenceEIP6492(true)
+
+      const sig = await walletClient.signMessage({ account, message })
+
+      // Disable EIP-6492 after signing
+      // otherwise all subsequent signatures will be EIP-6492 compatible
+      // and may fail to verify with non-EIP-6492 compatible apps
+
+      console.log('signature:', sig)
+      addNewConsoleLine(`signature: ${sig}`)
+
+      // get networkRpcUrl from walletClient, or set it yourself
+      const networkRpcUrl = walletClient.chain.rpcUrls.default.http[0]
+      const rpcProvider = new ethers.providers.JsonRpcProvider(networkRpcUrl)
+
+      // We use the sequence.utils.isValidMessageSignature method to verify signatures
+      // which works on Metamask, WalletConnect, Sequence, and any EOA / Smart wallet :)
+      // This single method can verify signatures from any kind of wallet.
+      const isValid = await sequence.utils.isValidMessageSignature(
+        account,
+        message,
+        sig,
+        rpcProvider
+      )
+
+      console.log('isValid?', isValid)
+      appendConsoleLine(`isValid? ${isValid}`)
+
+      setConsoleLoading(false) 
+    } catch(e) {
+      console.error(e)
+      consoleErrorMesssage()
+    }
+  }
+
   const signMessage = async () => {
     try {
       resetConsole()  
@@ -134,45 +179,23 @@ const App = () => {
   Two roads diverged in a wood, and I—
   I took the one less traveled by,
   And that has made all the difference.`
-      
-  
+
       const [account] = await walletClient.getAddresses()
   
       // sign
       const sig = await walletClient.signMessage({
         message,
-        account
+        account: account
       })
+
       console.log('signature:', sig)
-  
       addNewConsoleLine(`signature: ${sig}`)
 
-      // get networkRpcUrl from walletClient, or set it yourself
-      const networkRpcUrl = walletClient.chain.rpcUrls.default.http[0]
-
-      const rpcProvider = new ethers.providers.JsonRpcProvider(networkRpcUrl)
-      const web3Provider = new sequence.provider.Web3Provider(rpcProvider)
-
-      // We use the sequence.utils.isValidMessageSignature method to verify signatures
-      // which works on Metamask, WalletConnect, Sequence, and any EOA / Smart wallet :)
-      // This single method can verify signatures from any kind of wallet.
-      const isValid = await sequence.utils.isValidMessageSignature(
-        account,
+      const isValid = await publicClient.verifyMessage({
+        address: account,
         message,
-        sig,
-        web3Provider
-      )
-
-      // NOTE: this method will not work with 6492 verification, so we recommend
-      // to use the method below. We've left the code below here as a reference,
-      // as you may find it in wagmi/rainbowkit docs, but to support smart wallets too
-      // we recommend to use the sequence utils method above.
-      //
-      // const isValid = await publicClient.verifyMessage({
-      //   address: account,
-      //   message,
-      //   signature: sig
-      // })
+        signature: sig
+      })
 
       console.log('isValid?', isValid)
   
@@ -273,7 +296,10 @@ const App = () => {
 
         <Group label="Signing">
           <Button disabled={disableActions} onClick={() => signMessage()}>
-            Sign Message
+            Sign Message legacy
+          </Button>
+          <Button disabled={disableActions} onClick={() => signMessageEIP6492()}>
+            Sign Message EIP6492
           </Button>
         </Group>
 

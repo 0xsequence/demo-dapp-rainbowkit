@@ -45,7 +45,7 @@ const App = () => {
           chains,
           connect: {
             app: 'Demo app',
-            networkId: 137,
+            networkId: 1,
           },
 
           // EIP6492 can be enabled to allow signing messages

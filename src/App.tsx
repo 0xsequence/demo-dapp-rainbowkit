@@ -44,6 +44,13 @@ const App = () => {
 
   const walletConnectProjectId = 'ecf05e6e910a7006159c69f03dafbaeb'
 
+  const urlParams = new URLSearchParams(window.location.search)
+  let walletAppURL = 'https://sequence.app'
+
+  if (urlParams.get('walletAppURL') && urlParams.get('walletAppURL').length > 0) {
+    walletAppURL = urlParams.get('walletAppURL')
+  }
+
   const connectors = connectorsForWallets([
     {
       groupName: 'Recommended',
@@ -59,9 +66,10 @@ const App = () => {
           // without deploying the wallet first
           // useEIP6492: true,
 
-          // providerConfig: {
-          //   walletAppURL: 'https://dev.sequence.app'
-          // }
+          // This is optional, and only used to point to a custom
+          // environment for the wallet app. By default, it will
+          // point to https://sequence.app/
+          walletAppURL
         }),
         metaMaskWallet({ chains, projectId: walletConnectProjectId, shimDisconnect: true }),
         rainbowWallet({ chains, projectId: walletConnectProjectId }),

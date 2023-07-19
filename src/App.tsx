@@ -24,14 +24,21 @@ import {
   WagmiConfig,
 } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum, polygonMumbai } from '@wagmi/chains'
-import { publicProvider } from 'wagmi/providers/public';
+import { sequence } from '0xsequence';
 import Demo from './Demo'
 
 const App = () => {
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [mainnet, polygon, optimism, arbitrum, polygonMumbai],
     [
-      publicProvider()
+      (chain) => {
+        const network = sequence.network.findNetworkConfig(sequence.network.allNetworks, chain.id)
+        if (!network) {
+          throw new Error(`Could not find network config for chain ${chain.id}`)
+        }
+
+        return { chain, rpcUrls: { http: [network.rpcUrl] } }
+      }
     ]
   );
 

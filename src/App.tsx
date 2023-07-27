@@ -57,14 +57,11 @@ const App = () => {
       wallets: [
         sequenceWallet({
           chains,
+          // defaultNetwork: 1,
+
           connect: {
             app: 'Demo app',
-            networkId: 1,
           },
-
-          // EIP6492 can be enabled to allow signing messages
-          // without deploying the wallet first
-          // useEIP6492: true,
 
           // This is optional, and only used to point to a custom
           // environment for the wallet app. By default, it will

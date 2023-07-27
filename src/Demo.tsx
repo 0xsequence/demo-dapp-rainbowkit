@@ -15,7 +15,6 @@ import { configureLogger } from '@0xsequence/utils'
 import { Group } from './components/Group'
 import { Button } from './components/Button'
 import { Console } from './components/Console'
-import { useSequenceEIP6492 } from '@0xsequence/rainbowkit-plugin'
 
 configureLogger({ logLevel: 'DEBUG' })
 
@@ -115,10 +114,11 @@ const App = () => {
   
       const [account] = await walletClient.getAddresses()
 
-      // Enable EIP-6492
-      useSequenceEIP6492(true)
 
-      const sig = await walletClient.signMessage({ account, message })
+      const sig = await walletClient.request({
+        method: 'sequence_sign',
+        params: [message, account]
+      }) as string
 
       // Disable EIP-6492 after signing
       // otherwise all subsequent signatures will be EIP-6492 compatible

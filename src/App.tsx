@@ -57,7 +57,8 @@ const App = () => {
       wallets: [
         sequenceWallet({
           chains,
-          // defaultNetwork: 1,
+
+          defaultNetwork: 1,
 
           connect: {
             app: 'Demo app',

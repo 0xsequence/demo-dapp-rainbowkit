@@ -10,14 +10,15 @@
     "build": "BUILD_PATH='./dist' tsc && vite build",
     "serve": "vite preview",
     "dist": "yarn build",
+    "clear:vite:cache": "rm -rf node_modules/.vite/",
     "link-sequence": "yarn link 0xsequence @0xsequence/abi @0xsequence/api @0xsequence/auth @0xsequence/config @0xsequence/guard @0xsequence/multicall @0xsequence/network @0xsequence/provider @0xsequence/relayer @0xsequence/transactions @0xsequence/utils @0xsequence/wallet",
     "unlink-sequence": "yarn unlink 0xsequence @0xsequence/abi @0xsequence/api @0xsequence/auth @0xsequence/config @0xsequence/guard @0xsequence/multicall @0xsequence/network @0xsequence/provider @0xsequence/relayer @0xsequence/transactions @0xsequence/utils @0xsequence/wallet"
   },
   "dependencies": {
-    "0xsequence": "^1.0.4",
+    "0xsequence": "^1.1.0",
     "@0xsequence/design-system": "^0.1.107",
     "@0xsequence/ethauth": "^0.8.1",
-    "@0xsequence/rainbowkit-plugin": "^2.0.12",
+    "@0xsequence/rainbowkit-plugin": "^2.1.0",
     "@0xsequence/utils": "^1.0.2",
     "@rainbow-me/rainbowkit": "^1.0.6",
     "@testing-library/jest-dom": "^5.16.2",

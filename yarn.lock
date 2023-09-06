@@ -168,10 +168,10 @@
     eventemitter2 "^6.4.5"
     webextension-polyfill "^0.10.0"
 
-"@0xsequence/rainbowkit-plugin@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@0xsequence/rainbowkit-plugin/-/rainbowkit-plugin-2.1.2.tgz#70a860baf4bd12c3e7b69ea5e2c1dd5e73d1c8d1"
-  integrity sha512-5ESh9eTUEMEcQClxTpwRF+jar9CkmeuOi+YgK+yAmofozIblUBOOdcCSsi3JWhYvIjxMoMXscZ7mKQbi/v1kBw==
+"@0xsequence/rainbowkit-plugin@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@0xsequence/rainbowkit-plugin/-/rainbowkit-plugin-2.1.4.tgz#7050a85e88f5b81ef2a196f85f940e9d25b8c7cc"
+  integrity sha512-bC7Qv+Co/5/hjtBUHbcdrcuAu2oQhxCPk+emXMhYi+ORISGCVLu673JUw3jQd/OsTLkEYltFTJBPf0f/MurQ2w==
 
 "@0xsequence/relayer@1.1.10":
   version "1.1.10"

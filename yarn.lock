@@ -2,78 +2,79 @@
 # yarn lockfile v1
 
 
-"0xsequence@^1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/0xsequence/-/0xsequence-1.1.10.tgz#8e9bdcd273a1e73b4d974437f7c6889031c89062"
-  integrity sha512-joFC/XkKE8ge/WrXL1M0vE0cJhH1eUG5BIbefpy8fjyqzQOVjhAe17tMuYCbYG1fWeJvFY6q40GsDwFI3wXgzA==
+"0xsequence@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/0xsequence/-/0xsequence-1.6.2.tgz#caa5bc325ff0b1c1c2a31a1fd8d91cbd2a4128fd"
+  integrity sha512-7dGCmuA8j/1Oc3yCgL84HSCZmdBdoRfS5hEG1TPjDlTGiCPfgmvxewyzi9uGDgbmsoMUKYiu7mC1NdQMhvtlpg==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/account" "1.1.10"
-    "@0xsequence/api" "1.1.10"
-    "@0xsequence/auth" "1.1.10"
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/guard" "1.1.10"
-    "@0xsequence/indexer" "1.1.10"
-    "@0xsequence/metadata" "1.1.10"
-    "@0xsequence/migration" "1.1.10"
-    "@0xsequence/multicall" "1.1.10"
-    "@0xsequence/network" "1.1.10"
-    "@0xsequence/provider" "1.1.10"
-    "@0xsequence/relayer" "1.1.10"
-    "@0xsequence/sessions" "1.1.10"
-    "@0xsequence/signhub" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
-    "@0xsequence/wallet" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/account" "1.6.2"
+    "@0xsequence/api" "1.6.2"
+    "@0xsequence/auth" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/guard" "1.6.2"
+    "@0xsequence/indexer" "1.6.2"
+    "@0xsequence/metadata" "1.6.2"
+    "@0xsequence/migration" "1.6.2"
+    "@0xsequence/multicall" "1.6.2"
+    "@0xsequence/network" "1.6.2"
+    "@0xsequence/provider" "1.6.2"
+    "@0xsequence/relayer" "1.6.2"
+    "@0xsequence/sessions" "1.6.2"
+    "@0xsequence/signhub" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
+    "@0xsequence/wallet" "1.6.2"
 
-"@0xsequence/abi@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/abi/-/abi-1.1.10.tgz#d414b769748ea680aceaa9c95f937798571dd732"
-  integrity sha512-CZZQYa8lA/sbu9M7PT0Fy9HdvsjusOnXXe4DNLMb0M7Y8ZRD+0mrAIZfLH1m48+vf34HhuCtN1yj/SI/um05yQ==
+"@0xsequence/abi@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/abi/-/abi-1.6.2.tgz#06d1ca9771a1fe068c36ae2fb3659fb337bb02ad"
+  integrity sha512-3y0qu2wvhRPygnP1a4IFzAEC7K3aIIj8yOtqRoMnCf4Lud0I41Ry6M08Jc2HCK2BrK811jWn7rUCna0buu0UrQ==
 
-"@0xsequence/account@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/account/-/account-1.1.10.tgz#502e642907ff73ca7bbff03c86673e4107e6418e"
-  integrity sha512-QfydHEQ+0mMg6dyEIBsMWx2l/XW3cYw5VXVrP+JFyLYvZ+jqZeqoqUSl0meJusu8BWJ+0Bk4WjNWKKN+3XKttg==
+"@0xsequence/account@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/account/-/account-1.6.2.tgz#450235540278d874e49ec07befcb0345475f7865"
+  integrity sha512-VlSH06+u/Pjs3EeeV4Yi15DrIOYF97hNOI3p6F5c2/4XGn0HOC8P/luiDuchHZgr9xZcGK3enEA62cFEvJlz5Q==
   dependencies:
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/migration" "1.1.10"
-    "@0xsequence/network" "1.1.10"
-    "@0xsequence/relayer" "1.1.10"
-    "@0xsequence/sessions" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
-    "@0xsequence/wallet" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/migration" "1.6.2"
+    "@0xsequence/network" "1.6.2"
+    "@0xsequence/relayer" "1.6.2"
+    "@0xsequence/sessions" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
+    "@0xsequence/wallet" "1.6.2"
     ethers "^5.5.2"
 
-"@0xsequence/api@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/api/-/api-1.1.10.tgz#402cf222675703fc31657214c53536392725fc37"
-  integrity sha512-smPEpHSZsLsEklKn1SXlKm7sbxo4gvH7qtSycwk21GCIFaXC7Xs9t/Ms8NVFs+Irv4TwGZ5zBG1PBpiO4AHv8A==
+"@0xsequence/api@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/api/-/api-1.6.2.tgz#5fb30a0be646036c04b50d9f7db491659561b026"
+  integrity sha512-ZzOZwQ/ABX+NtWyRNcZiIpJkIU5LOLMZdP86wLhrFTaOdAkGgbyMNx60TQkoAApD/j0EHhEjqkGqdekcSXfmQg==
 
-"@0xsequence/auth@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/auth/-/auth-1.1.10.tgz#041eea87a61c641af796aca1a8c8fde101f02c91"
-  integrity sha512-3GUJz8R9JzIEM3ZE5Y+5nhhE2oxNqWWn89PMDMe79eM47pKS6VeG1COioCq+BkU6BWMyxa8SRTDBlywWpsm4IA==
+"@0xsequence/auth@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/auth/-/auth-1.6.2.tgz#757081aed23f64796b6e567a56ddf8d38b65c9f6"
+  integrity sha512-JfNgFRMDcXwsZsrGHYS+mhhJGgM+G78Lxe6zFOeEUEbErptNe1ucJNViCSgEDDdSCFl5kIzuzei2X4L8Tz+u/Q==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/account" "1.1.10"
-    "@0xsequence/api" "1.1.10"
-    "@0xsequence/core" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/account" "1.6.2"
+    "@0xsequence/api" "1.6.2"
+    "@0xsequence/core" "1.6.2"
     "@0xsequence/ethauth" "^0.8.1"
-    "@0xsequence/indexer" "1.1.10"
-    "@0xsequence/metadata" "1.1.10"
-    "@0xsequence/migration" "1.1.10"
-    "@0xsequence/network" "1.1.10"
-    "@0xsequence/sessions" "1.1.10"
-    "@0xsequence/signhub" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
-    "@0xsequence/wallet" "1.1.10"
+    "@0xsequence/indexer" "1.6.2"
+    "@0xsequence/metadata" "1.6.2"
+    "@0xsequence/migration" "1.6.2"
+    "@0xsequence/network" "1.6.2"
+    "@0xsequence/sessions" "1.6.2"
+    "@0xsequence/signhub" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
+    "@0xsequence/wallet" "1.6.2"
 
-"@0xsequence/core@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/core/-/core-1.1.10.tgz#d0ad8f268c1410fd9f58ee0d84f94874bfdc9392"
-  integrity sha512-luBGXe/MuMnfk9UdxJ8ORnViBFgYVndqEicaamE+1/9yyqaG5KNDOEnMLyZZrK+vpJb9EaaAkSaggdsSXvX4zg==
+"@0xsequence/core@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/core/-/core-1.6.2.tgz#dd42e47fb2f1df464be6038776166e53b01be3c5"
+  integrity sha512-rcr7DcEEgcp8c86iNqJi9o0fbUQEuALTwnDDscRJyz75Iow+Fp+eU885Ew6pCSXD+EBu7srKbRKWTyX6nIPG9A==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
 
 "@0xsequence/design-system@^0.1.107":
   version "0.1.138"
@@ -103,68 +104,70 @@
   dependencies:
     js-base64 "^3.7.2"
 
-"@0xsequence/guard@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/guard/-/guard-1.1.10.tgz#f21a1c7ae78fd3638031837f980e2de8f1104871"
-  integrity sha512-dNhGdAI1kstCFAv6EScbmcAhOoBYI0rXrd29TYXyyFqWQhFS7OCtCfzCGOwqtpOcQpcrcjOWlAy8J2jiO8qBdA==
+"@0xsequence/guard@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/guard/-/guard-1.6.2.tgz#1f0bfc489014e9f1e9291a0ec18042024bee91d4"
+  integrity sha512-Y5QfazySIr+wkQeenlp9ZQbSOCFbAoRy+bNWXg3a9QfPHnXh37ndujIz6W8jxsKf+dZoyLEbzt+ijxnUFdacag==
   dependencies:
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/signhub" "1.1.10"
+    "@0xsequence/account" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/signhub" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
     ethers "^5.7.2"
 
-"@0xsequence/indexer@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/indexer/-/indexer-1.1.10.tgz#72829a93448ccbec3691632d1206f867778149b1"
-  integrity sha512-c/c658plx2h2w1AmAUTlXYBsEYESgkPL3tLIGnEIwE6uEQOYFE3KUWng+TyIUNKOOp0tDVWoWLBMmNI/prruKA==
+"@0xsequence/indexer@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/indexer/-/indexer-1.6.2.tgz#c18e0e05d261fe1f3cceb2a4344ac2a10eb309bd"
+  integrity sha512-n/cF+ONcew5SN2voHSMMZq/SzO1X6BGRQPWol2hk8tlqx7Txu8VkiauWNcz1IFEe50aBEkvc3ZqPYuDfo/zWEw==
 
-"@0xsequence/metadata@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/metadata/-/metadata-1.1.10.tgz#a85ab14e5d9193c8c785f4a1a02eb6f27548e59d"
-  integrity sha512-hCJA4K6nCWSiTkrJ1yXoPpjfNmH6QJ4DrB4jXcetQGXKaeTr5sA0JoqppYBnGNLI2EAcsNqbPnxcZMZgfT47QA==
+"@0xsequence/metadata@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/metadata/-/metadata-1.6.2.tgz#7c7a71e7295b93110e248d53af35e2650e6cf125"
+  integrity sha512-pxBcQPNgwEh8YOnXwYSh9Q/R49bWWgr8Qcrgva+bL4NjbM23obnIoYHnHHL5H3WgoCZ92/2CdzVUnZkotzGObA==
 
-"@0xsequence/migration@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/migration/-/migration-1.1.10.tgz#7098428c165878091a69e5cb4bbdf8a1bc58a7da"
-  integrity sha512-95FGwkrHSaWYMFHpY2KjqY0TOsZVyEq6tIuZ6Hh/zZGtJoEnA6wgyJSXKpq032dz82O1hUK85Z/trCReA6C+ug==
+"@0xsequence/migration@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/migration/-/migration-1.6.2.tgz#05f13d3ef5d95ca140f75876b36ac5840f576d9a"
+  integrity sha512-pB582HWmFhMcl8DvGwdrTBInYGasRldx8GdcSyqsgZG/KVTmbylffQgv333fSFKOtPiBrO/rW1nhEw3Iapo2+Q==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/wallet" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/wallet" "1.6.2"
     ethers "^5.5.2"
 
-"@0xsequence/multicall@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/multicall/-/multicall-1.1.10.tgz#974f879f53d1d77b9d14e2df296e091afecfbf46"
-  integrity sha512-mgcVBtCis6/jmupeFH4rv9npxSKp3pRAKCO6SsJ4ORkH2YQQwrdJXJi5ZAb4T8yK2sxTdVT0940EtW1mEHkcFA==
+"@0xsequence/multicall@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/multicall/-/multicall-1.6.2.tgz#90f8bf65c334b467626d98873ec587819c5e5c59"
+  integrity sha512-M34YwzX74WEjF0jEugS4GctigZtMCJQSXywGADWqPyY4SoJGJWssYy90vWN7mkXKH3vBjW8+SojxJZgHl5M61Q==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/network" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/network" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
 
-"@0xsequence/network@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/network/-/network-1.1.10.tgz#4436bdaf881456ef4d0d00063bb447fe9115a402"
-  integrity sha512-6V7cjXgxcSheJP7ltiqc9PVVuYxW6r7CDwg2YOX7ZRx6BvjC4sOsIlT/wEyyHjqfXKP8f4O1K2gutfLDrUv5lw==
+"@0xsequence/network@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/network/-/network-1.6.2.tgz#d1f71d3217948b120bc98002ee678fb45750538f"
+  integrity sha512-BlBy/g2YGdtf7A0UL6F63BwPWCSxJg5EpG3/sQn/zRyaxrdyoL6Kpe7ZVxTFYH51Z67QJcMp2XoFwUj2YHl+UQ==
   dependencies:
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/indexer" "1.1.10"
-    "@0xsequence/relayer" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/indexer" "1.6.2"
+    "@0xsequence/relayer" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
 
-"@0xsequence/provider@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/provider/-/provider-1.1.10.tgz#ff1227f2179ab7e5c66fbf729714eff84efe2cd2"
-  integrity sha512-oudQ6EHYufAcbO7/rLX8rGB+vK4Be5yFN4NLBhVzuDaup2jiAmwZWdzsRXa1l5i5tENcV6ucvU3UmKd+oHF1YQ==
+"@0xsequence/provider@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/provider/-/provider-1.6.2.tgz#3e37c06732ca7000d8bc54b08d61afc3976f73a0"
+  integrity sha512-e/xLuxO17iI9xyamqwjZp012wcBDu8mKkKlsjXhG/I7yjOCOmVMwyruhuUleWisQp3bI759Glilj3vT7GDnZIA==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/account" "1.1.10"
-    "@0xsequence/auth" "1.1.10"
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/migration" "1.1.10"
-    "@0xsequence/network" "1.1.10"
-    "@0xsequence/relayer" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
-    "@0xsequence/wallet" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/account" "1.6.2"
+    "@0xsequence/auth" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/migration" "1.6.2"
+    "@0xsequence/network" "1.6.2"
+    "@0xsequence/relayer" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
+    "@0xsequence/wallet" "1.6.2"
     eventemitter2 "^6.4.5"
     webextension-polyfill "^0.10.0"
 
@@ -173,59 +176,67 @@
   resolved "https://registry.yarnpkg.com/@0xsequence/rainbowkit-plugin/-/rainbowkit-plugin-2.1.4.tgz#7050a85e88f5b81ef2a196f85f940e9d25b8c7cc"
   integrity sha512-bC7Qv+Co/5/hjtBUHbcdrcuAu2oQhxCPk+emXMhYi+ORISGCVLu673JUw3jQd/OsTLkEYltFTJBPf0f/MurQ2w==
 
-"@0xsequence/relayer@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/relayer/-/relayer-1.1.10.tgz#7add72a17018db5aa38ef9c754b2cb115af998c3"
-  integrity sha512-APAvdM1F/ssOg8KXe39+FVtnPWvfxNM1bz9U5vHklssjbyxxt4PXZOmwa3E8Yv5jI7Ff+qZ71e7sQq+owIMryA==
+"@0xsequence/relayer@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/relayer/-/relayer-1.6.2.tgz#593c50c30012039a3ddf318f96db3e0ef560b079"
+  integrity sha512-lfz6ZmGptnA0tn14Qb/y6gc9hewT/biEFCu3RG++kCmZu1Nn0+Cgqo2nN/jpFax2sFUQwGeauuwGm+7aTM6/oA==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
 
-"@0xsequence/replacer@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/replacer/-/replacer-1.1.10.tgz#740b808664ee5b1bbf3ec59d1dd312616e21b4ff"
-  integrity sha512-YKUN6qtTiijPb8aStFzZp9ZlpMguyTtm0a0TpgUS7gwOl+11l56jvhINxnxXZMtLTAfkriI8wzsEJ+n9QkpGNg==
+"@0xsequence/replacer@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/replacer/-/replacer-1.6.2.tgz#64b994d233a74783d5822df7c81ad7659c5f7c2b"
+  integrity sha512-2lBEmFGzDiIFbd4etnL1E6CAzJFS9NbTykbDDNw+4sQBvbjiBHrX6YQIlq1gqWdpO2upMEoPOcvnEFqzFmeJKA==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/core" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/core" "1.6.2"
 
-"@0xsequence/sessions@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/sessions/-/sessions-1.1.10.tgz#995d4b96ba753ca9ec27643e72eec50ab3cbc27e"
-  integrity sha512-4yqo1IKEK11cfcuRjHlHE/VH+ZpqBcqo0UT85qxcLeB2eJ1UhHdXFhGhKB6vq1KOhh6o/B3M4yYH0jHSlHfG5Q==
+"@0xsequence/sessions@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/sessions/-/sessions-1.6.2.tgz#cae88ecd590666659c58e5e5019b3006f4a5a767"
+  integrity sha512-i2PFdO3+hmIcNd/jzcpNqSdPVUcw65zAuCIx8rJqEeAJufCvCRiwWQTe7g6mNuEs4RIHSJGpk4Qsr2KCUvQilw==
   dependencies:
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/migration" "1.1.10"
-    "@0xsequence/replacer" "1.1.10"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/migration" "1.6.2"
+    "@0xsequence/replacer" "1.6.2"
     ethers "^5.5.2"
     idb "^7.1.1"
 
-"@0xsequence/signhub@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/signhub/-/signhub-1.1.10.tgz#c4daa0f9579ab1f423c4d1a2df5fcb627e59f308"
-  integrity sha512-ejgqzwkj2aQZIrYXp5PELrfdbOGtiL9hnH9POLaNnUxpuSbQhDanRDlF7ebgDNF86WjNu5WeXHulaHJJrXNUlg==
+"@0xsequence/signhub@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/signhub/-/signhub-1.6.2.tgz#722a2d3985037fac5e93f81ff581c58297a587a5"
+  integrity sha512-+tz9mm3j95TrSBgKJSEtoEQd40ecS76c9tPEpgJs6yqBbvd1le/FJXMa6v5lmfXCANvvdoi2/yLpvC7vo7AfwQ==
   dependencies:
+    "@0xsequence/core" "1.6.2"
     ethers "^5.5.2"
 
-"@0xsequence/utils@1.1.10", "@0xsequence/utils@^1.0.2":
+"@0xsequence/utils@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/utils/-/utils-1.6.2.tgz#7cd92672c714b691281716dbcd4066d429a22dd7"
+  integrity sha512-6u9f/Ey9nipwXrIsOjOnVMnmAYbMbLJ28hqct62fK3cCLJ/IilmDP3Z/aGMYwzrz6esZG9cEzAd2Y/hjBQ2s5A==
+  dependencies:
+    js-base64 "^3.7.2"
+
+"@0xsequence/utils@^1.0.2":
   version "1.1.10"
   resolved "https://registry.yarnpkg.com/@0xsequence/utils/-/utils-1.1.10.tgz#62632ee5f0a21972675e6ad688495cfd496d7144"
   integrity sha512-pYYNKv5TlXvqyKmvPGeJklHLV1CR3efQ4szVKjklCtgyNd43O8h/k4YYp++8P7d6EtYuoqoDqHgAXYxHc4Fl8w==
   dependencies:
     js-base64 "^3.7.2"
 
-"@0xsequence/wallet@1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@0xsequence/wallet/-/wallet-1.1.10.tgz#765a92e613827b76375aca8bdc1b64f365904316"
-  integrity sha512-6NbMw95Vw37mKfEcc+xgbScBhN3XrL04GrmW4MRT7tDJULetnOdPfZXIvbC+ntYmJBKRnqt/e2KmREjQ+Hmzow==
+"@0xsequence/wallet@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@0xsequence/wallet/-/wallet-1.6.2.tgz#9b1b12a7a87fc35bfb834a2538d02b04ffece5dd"
+  integrity sha512-r8AA/uALVWsTYvYGGsSGGKGhMTsiK43IrtZ3nVxB0i4DbGCWMRFQf+PY7TGM2MKb9mfwrwIsnfGjvwpjSDVD1w==
   dependencies:
-    "@0xsequence/abi" "1.1.10"
-    "@0xsequence/core" "1.1.10"
-    "@0xsequence/network" "1.1.10"
-    "@0xsequence/relayer" "1.1.10"
-    "@0xsequence/signhub" "1.1.10"
-    "@0xsequence/utils" "1.1.10"
+    "@0xsequence/abi" "1.6.2"
+    "@0xsequence/core" "1.6.2"
+    "@0xsequence/network" "1.6.2"
+    "@0xsequence/relayer" "1.6.2"
+    "@0xsequence/signhub" "1.6.2"
+    "@0xsequence/utils" "1.6.2"
 
 "@adobe/css-tools@^4.0.1":
   version "4.3.1"

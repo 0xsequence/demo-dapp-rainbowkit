@@ -7,7 +7,6 @@ import '@0xsequence/design-system/styles.css'
 import {
   RainbowKitProvider,
   connectorsForWallets,
-
 } from '@rainbow-me/rainbowkit';
 
 import { sequenceWallet } from '@0xsequence/rainbowkit-plugin'
@@ -22,6 +21,7 @@ import {
   configureChains,
   createConfig,
   WagmiConfig,
+  Connector,
 } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum, polygonMumbai } from '@wagmi/chains'
 import { sequence } from '0xsequence';
@@ -55,7 +55,9 @@ const App = () => {
     {
       groupName: 'Recommended',
       wallets: [
+        /* @ts-ignore-next-line */
         sequenceWallet({
+          projectAccessKey: 'iK0DPkHRt0IFo8o4M3fZIIOAAAAAAAAAA',
           chains,
 
           defaultNetwork: 1,

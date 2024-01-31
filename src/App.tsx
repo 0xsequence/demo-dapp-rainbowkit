@@ -55,7 +55,6 @@ const App = () => {
     {
       groupName: 'Recommended',
       wallets: [
-        /* @ts-ignore-next-line */
         sequenceWallet({
           projectAccessKey: 'iK0DPkHRt0IFo8o4M3fZIIOAAAAAAAAAA',
           chains,

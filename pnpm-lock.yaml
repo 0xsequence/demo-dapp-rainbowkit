@@ -35,9 +35,6 @@ dependencies:
   '@vanilla-extract/css':
     specifier: ^1.14.2
     version: 1.14.2
-  '@wagmi/chains':
-    specifier: ^1.8.0
-    version: 1.8.0(typescript@5.4.4)
   ethers:
     specifier: ^5.7.2
     version: 5.7.2
@@ -3276,17 +3273,6 @@ packages:
 
   /@wagmi/chains@1.6.0(typescript@5.4.4):
     resolution: {integrity: sha512-5FRlVxse5P4ZaHG3GTvxwVANSmYJas1eQrTBHhjxVtqXoorm0aLmCHbhmN8Xo1yu09PaWKlleEvfE98yH4AgIw==}
-    peerDependencies:
-      typescript: '>=5.0.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      typescript: 5.4.4
-    dev: false
-
-  /@wagmi/chains@1.8.0(typescript@5.4.4):
-    resolution: {integrity: sha512-UXo0GF0Cl0+neKC2KAmVAahv8L/5rACbFRRqkDvHMefzY6Fh7yzJd8F4GaGNNG3w4hj8eUB/E3+dEpaTYDN62w==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:

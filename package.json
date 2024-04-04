@@ -25,7 +25,6 @@
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "@vanilla-extract/css": "^1.14.2",
-    "@wagmi/chains": "^1.8.0",
     "ethers": "^5.7.2",
     "framer-motion": "^9.0.1",
     "react": "^18.2.0",

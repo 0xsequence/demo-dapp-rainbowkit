@@ -23,24 +23,24 @@ const App = () => {
   const publicClient = usePublicClient()
   const { data: walletClient } = useWalletClient()
 
-  const [consoleMsg, setConsoleMsg] = useState<null|string>(null)
+  const [consoleMsg, setConsoleMsg] = useState<null | string>(null)
   const [consoleLoading, setConsoleLoading] = useState<boolean>(false)
 
   const appendConsoleLine = (message: string) => {
-    return (setConsoleMsg((prevState => {
+    return setConsoleMsg(prevState => {
       return `${prevState}\n\n${message}`
-    })))
+    })
   }
-  
+
   const resetConsole = () => {
     setConsoleMsg(null)
     setConsoleLoading(true)
   }
 
   const addNewConsoleLine = (message: string) => {
-    setConsoleMsg((() => {
-      return (message)
-    }))
+    setConsoleMsg(() => {
+      return message
+    })
   }
 
   const consoleWelcomeMessage = () => {
@@ -68,7 +68,7 @@ const App = () => {
       console.log('walletClient.getChainId()', chainId)
       addNewConsoleLine(`walletClient.getChainId(): ${chainId}`)
       setConsoleLoading(false)
-    } catch(e) {
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -79,14 +79,14 @@ const App = () => {
       resetConsole()
       const [account] = await walletClient.getAddresses()
       const balance = await publicClient.getBalance({
-        address: account,
+        address: account
       })
       const formattedBalance = formatEther(balance)
       console.log('balance', formattedBalance)
       addNewConsoleLine(`balance: ${formattedBalance}`)
-  
-      setConsoleLoading(false) 
-    } catch(e) {
+
+      setConsoleLoading(false)
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -97,10 +97,10 @@ const App = () => {
       resetConsole()
       const network = publicClient.chain
       console.log('network:', network)
-  
+
       addNewConsoleLine(`network: ${JSON.stringify(network)}`)
-      setConsoleLoading(false) 
-    } catch(e) {
+      setConsoleLoading(false)
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -111,14 +111,13 @@ const App = () => {
       resetConsole()
 
       const message = `This signature is compatible with EIP-6492, this means that it can be verified by a smart contract wallet like Sequence, without having to deploy anything onchain.`
-  
+
       const [account] = await walletClient.getAddresses()
 
-
-      const sig = await walletClient.request({
+      const sig = (await walletClient.request({
         method: 'sequence_sign',
         params: [message, account]
-      }) as string
+      })) as string
 
       // Disable EIP-6492 after signing
       // otherwise all subsequent signatures will be EIP-6492 compatible
@@ -134,18 +133,13 @@ const App = () => {
       // We use the sequence.utils.isValidMessageSignature method to verify signatures
       // which works on Metamask, WalletConnect, Sequence, and any EOA / Smart wallet :)
       // This single method can verify signatures from any kind of wallet.
-      const isValid = await sequence.utils.isValidMessageSignature(
-        account,
-        message,
-        sig,
-        rpcProvider
-      )
+      const isValid = await sequence.utils.isValidMessageSignature(account, message, sig, rpcProvider)
 
       console.log('isValid?', isValid)
       appendConsoleLine(`isValid? ${isValid}`)
 
-      setConsoleLoading(false) 
-    } catch(e) {
+      setConsoleLoading(false)
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -153,7 +147,7 @@ const App = () => {
 
   const signMessage = async () => {
     try {
-      resetConsole()  
+      resetConsole()
       const message = `Two roads diverged in a yellow wood,
   Robert Frost poet
   
@@ -181,7 +175,7 @@ const App = () => {
   And that has made all the difference.`
 
       const [account] = await walletClient.getAddresses()
-  
+
       // sign
       const sig = await walletClient.signMessage({
         message,
@@ -198,10 +192,10 @@ const App = () => {
       })
 
       console.log('isValid?', isValid)
-  
+
       appendConsoleLine(`isValid? ${isValid}`)
-      setConsoleLoading(false) 
-    } catch(e) {
+      setConsoleLoading(false)
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -210,25 +204,25 @@ const App = () => {
   const sendETH = async () => {
     try {
       resetConsole()
-  
+
       console.log(`Transfer txn on ${walletClient.getChainId()}`)
       addNewConsoleLine(`Transfer txn on ${walletClient.getChainId()}`)
-  
+
       const toAddress = ethers.Wallet.createRandom().address
-  
+
       const balance1 = await publicClient.getBalance({
         address: toAddress as Address
       })
       console.log(`balance of ${toAddress}, before:`, balance1)
       appendConsoleLine(`balance of ${toAddress}, before: ${balance1}`)
-      
+
       const [account] = await walletClient.getAddresses()
 
       /* @ts-ignore-next-line */
       await walletClient.sendTransaction({
         to: toAddress as Address,
-        value: parseEther('1.00'),
-        account,
+        value: parseEther('0.000123'),
+        account
       })
 
       const balance2 = await publicClient.getBalance({
@@ -236,8 +230,8 @@ const App = () => {
       })
       console.log(`balance of ${toAddress}, after:`, balance2)
       appendConsoleLine(`balance of ${toAddress}, after: ${balance2}`)
-      setConsoleLoading(false) 
-    } catch(e) {
+      setConsoleLoading(false)
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -247,9 +241,9 @@ const App = () => {
     try {
       resetConsole()
       const toAddress = ethers.Wallet.createRandom().address
-  
-      const amount = ethers.utils.parseUnits('5', 18)
-  
+
+      const amount = ethers.utils.parseUnits('0.0123', 18)
+
       const daiContractAddress = '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063' // (DAI address on Polygon)
 
       const [account] = await walletClient.getAddresses()
@@ -259,13 +253,16 @@ const App = () => {
         account,
         to: daiContractAddress,
         value: 0n,
-        data: new ethers.utils.Interface(ERC_20_ABI).encodeFunctionData('transfer', [toAddress, amount.toHexString()]) as `0x${string}`
+        data: new ethers.utils.Interface(ERC_20_ABI).encodeFunctionData('transfer', [
+          toAddress,
+          amount.toHexString()
+        ]) as `0x${string}`
       })
-  
+
       console.log('transaction response', hash)
       addNewConsoleLine(`TX response ${hash}`)
-      setConsoleLoading(false) 
-    } catch(e) {
+      setConsoleLoading(false)
+    } catch (e) {
       console.error(e)
       consoleErrorMesssage()
     }
@@ -311,7 +308,7 @@ const App = () => {
             Send DAI Tokens
           </Button>
         </Group>
-        </>
+      </>
     )
   }
 
@@ -321,39 +318,28 @@ const App = () => {
         <Image height="10" alt="logo" src={logoUrl} />
       </Box>
 
-      <Box  marginBottom="4">
-        <Text color="text100" variant="large">Demo Dapp + RainbowKit</Text>
+      <Box marginBottom="4">
+        <Text color="text100" variant="large">
+          Demo Dapp + RainbowKit
+        </Text>
       </Box>
 
       <ConnectButton.Custom>
-        {({
-          account,
-          chain,
-          openAccountModal,
-          openChainModal,
-          openConnectModal,
-          authenticationStatus,
-          mounted,
-        }) => {
+        {({ account, chain, openAccountModal, openChainModal, openConnectModal, authenticationStatus, mounted }) => {
           // Note: If your app doesn't use authentication, you
           // can remove all 'authenticationStatus' checks
-          const ready = mounted && authenticationStatus !== 'loading';
-          const connected =
-            ready &&
-            account &&
-            chain &&
-            (!authenticationStatus ||
-              authenticationStatus === 'authenticated');
+          const ready = mounted && authenticationStatus !== 'loading'
+          const connected = ready && account && chain && (!authenticationStatus || authenticationStatus === 'authenticated')
 
           return (
             <div
               {...(!ready && {
                 'aria-hidden': true,
-                'style': {
+                style: {
                   opacity: 0,
                   pointerEvents: 'none',
-                  userSelect: 'none',
-                },
+                  userSelect: 'none'
+                }
               })}
             >
               {(() => {
@@ -362,7 +348,7 @@ const App = () => {
                     <Button style={{ marginBottom: '20px' }} onClick={openConnectModal} type="button">
                       Connect Wallet
                     </Button>
-                  );
+                  )
                 }
 
                 if (chain.unsupported) {
@@ -370,16 +356,12 @@ const App = () => {
                     <Button onClick={openChainModal} type="button">
                       Wrong network
                     </Button>
-                  );
+                  )
                 }
 
                 return (
                   <div style={{ display: 'flex', gap: 12 }}>
-                    <Button
-                      onClick={openChainModal}
-                      style={{ display: 'flex', alignItems: 'center' }}
-                      type="button"
-                    >
+                    <Button onClick={openChainModal} style={{ display: 'flex', alignItems: 'center' }} type="button">
                       {chain.hasIcon && (
                         <div
                           style={{
@@ -388,15 +370,11 @@ const App = () => {
                             height: 12,
                             borderRadius: 999,
                             overflow: 'hidden',
-                            marginRight: 4,
+                            marginRight: 4
                           }}
                         >
                           {chain.iconUrl && (
-                            <img
-                              alt={chain.name ?? 'Chain icon'}
-                              src={chain.iconUrl}
-                              style={{ width: 12, height: 12 }}
-                            />
+                            <img alt={chain.name ?? 'Chain icon'} src={chain.iconUrl} style={{ width: 12, height: 12 }} />
                           )}
                         </div>
                       )}
@@ -405,15 +383,13 @@ const App = () => {
 
                     <Button onClick={openAccountModal} type="button">
                       {account.displayName}
-                      {account.displayBalance
-                        ? ` (${account.displayBalance})`
-                        : ''}
+                      {account.displayBalance ? ` (${account.displayBalance})` : ''}
                     </Button>
                   </div>
-                );
+                )
               })()}
             </div>
-          );
+          )
         }}
       </ConnectButton.Custom>
       {getWalletActions()}
@@ -423,4 +399,3 @@ const App = () => {
 }
 
 export default React.memo(App)
-

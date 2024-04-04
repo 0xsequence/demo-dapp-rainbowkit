@@ -1,15 +1,29 @@
 name: build dapp
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
+  install:
+    name: Install dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/install-dependencies
+
   build:
-    name: Run build
+    name: Build
     runs-on: ubuntu-latest
     needs: [install]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/install-dependencies
+      - run: pnpm build
+
+  deploy:
+    name: GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [install]
+    if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/install-dependencies
@@ -17,11 +31,11 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Push
+      - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: build
-          FOLDER: dist
+          BRANCH: gh-pages
+          FOLDER: public
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: 'Build: ({sha}) {msg}'
+          MESSAGE: 'Deploy: ({sha}) {msg}'

@@ -20,7 +20,8 @@
     "@0xsequence/ethauth": "^0.8.1",
     "@0xsequence/rainbowkit-plugin": "^2.1.7",
     "@0xsequence/utils": "^1.9.14",
-    "@rainbow-me/rainbowkit": "^1.0.6",
+    "@rainbow-me/rainbowkit": "^2.0.5",
+    "@tanstack/react-query": "^5.28.14",
     "@types/node": "^20.12.4",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
@@ -31,8 +32,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.4.4",
-    "viem": "^1.3.0",
-    "wagmi": "^1.3.9"
+    "viem": "^2.9.9",
+    "wagmi": "^2.5.18"
   },
   "devDependencies": {
     "@vanilla-extract/vite-plugin": "^4.0.7",

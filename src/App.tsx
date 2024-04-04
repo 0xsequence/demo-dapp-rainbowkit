@@ -1,37 +1,24 @@
 import React from 'react'
-import '@rainbow-me/rainbowkit/styles.css';
+import '@rainbow-me/rainbowkit/styles.css'
 
 import { ThemeProvider } from '@0xsequence/design-system'
 import '@0xsequence/design-system/styles.css'
 
-import {
-  RainbowKitProvider,
-  connectorsForWallets,
-} from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, connectorsForWallets } from '@rainbow-me/rainbowkit'
 
 import { sequenceWallet } from '@0xsequence/rainbowkit-plugin'
-import {
-  metaMaskWallet,
-  injectedWallet,
-  rainbowWallet,
-  walletConnectWallet
-} from '@rainbow-me/rainbowkit/wallets'
+import { metaMaskWallet, injectedWallet, rainbowWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
 
-import {
-  configureChains,
-  createConfig,
-  WagmiConfig,
-  Connector,
-} from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum, polygonMumbai } from '@wagmi/chains'
-import { sequence } from '0xsequence';
+import { configureChains, createConfig, WagmiConfig, Connector } from 'wagmi'
+import { mainnet, polygon, optimism, arbitrum, sepolia } from '@wagmi/chains'
+import { sequence } from '0xsequence'
 import Demo from './Demo'
 
 const App = () => {
   const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [mainnet, polygon, optimism, arbitrum, polygonMumbai],
+    [mainnet, polygon, optimism, arbitrum, sepolia],
     [
-      (chain) => {
+      chain => {
         const network = sequence.network.findNetworkConfig(sequence.network.allNetworks, chain.id)
         if (!network) {
           throw new Error(`Could not find network config for chain ${chain.id}`)
@@ -40,7 +27,7 @@ const App = () => {
         return { chain, rpcUrls: { http: [network.rpcUrl] } }
       }
     ]
-  );
+  )
 
   const walletConnectProjectId = 'ecf05e6e910a7006159c69f03dafbaeb'
 
@@ -62,7 +49,7 @@ const App = () => {
           defaultNetwork: 1,
 
           connect: {
-            app: 'Demo app',
+            app: 'Demo app'
           },
 
           // This is optional, and only used to point to a custom
@@ -74,13 +61,13 @@ const App = () => {
         rainbowWallet({ chains, projectId: walletConnectProjectId }),
         walletConnectWallet({
           chains,
-          projectId: walletConnectProjectId,
+          projectId: walletConnectProjectId
         }),
         injectedWallet({ chains, shimDisconnect: true })
       ]
     }
   ])
-  
+
   const wagmiConfig = createConfig({
     autoConnect: true,
     connectors,

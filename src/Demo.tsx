@@ -97,7 +97,7 @@ const App = () => {
       const network = publicClient.chain
       console.log('network:', network)
 
-      addNewConsoleLine(`network: ${JSON.stringify(network)}`)
+      addNewConsoleLine(`network: ${JSON.stringify(network, null, 2)}`)
       setConsoleLoading(false)
     } catch (e) {
       console.error(e)

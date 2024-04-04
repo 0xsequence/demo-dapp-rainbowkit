@@ -1,4 +1,4 @@
-import { Box, Image, Text } from '@0xsequence/design-system'
+import { Box, Image, Text, Button, TokenImage, GradientAvatar } from '@0xsequence/design-system'
 import React, { useState, useEffect } from 'react'
 
 import logoUrl from './images/logo.svg'
@@ -13,7 +13,6 @@ import { ERC_20_ABI } from './constants/abi'
 
 import { configureLogger } from '@0xsequence/utils'
 import { Group } from './components/Group'
-import { Button } from './components/Button'
 import { Console } from './components/Console'
 
 configureLogger({ logLevel: 'DEBUG' })
@@ -149,30 +148,30 @@ const App = () => {
     try {
       resetConsole()
       const message = `Two roads diverged in a yellow wood,
-  Robert Frost poet
-  
-  And sorry I could not travel both
-  And be one traveler, long I stood
-  And looked down one as far as I could
-  To where it bent in the undergrowth;
-  
-  Then took the other, as just as fair,
-  And having perhaps the better claim,
-  Because it was grassy and wanted wear;
-  Though as for that the passing there
-  Had worn them really about the same,
-  
-  And both that morning equally lay
-  In leaves no step had trodden black.
-  Oh, I kept the first for another day!
-  Yet knowing how way leads on to way,
-  I doubted if I should ever come back.
-  
-  I shall be telling this with a sigh
-  Somewhere ages and ages hence:
-  Two roads diverged in a wood, and I—
-  I took the one less traveled by,
-  And that has made all the difference.`
+Robert Frost poet
+
+And sorry I could not travel both
+And be one traveler, long I stood
+And looked down one as far as I could
+To where it bent in the undergrowth;
+
+Then took the other, as just as fair,
+And having perhaps the better claim,
+Because it was grassy and wanted wear;
+Though as for that the passing there
+Had worn them really about the same,
+
+And both that morning equally lay
+In leaves no step had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.
+
+I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I—
+I took the one less traveled by,
+And that has made all the difference.`
 
       const [account] = await walletClient.getAddresses()
 
@@ -277,36 +276,36 @@ const App = () => {
     return (
       <>
         <Box marginBottom="4">
-          <Text>Please open your browser dev inspector to view output of functions below</Text>
+          <Text variant="normal" color="text80">
+            Please open your browser dev inspector to view output of functions below
+          </Text>
         </Box>
         <Group label="State">
-          <Button disabled={disableActions} onClick={() => getChainID()}>
-            ChainID
-          </Button>
-          <Button disabled={disableActions} onClick={() => getNetwork()}>
-            Networks
-          </Button>
-          <Button disabled={disableActions} onClick={() => getBalance()}>
-            Get Balance
-          </Button>
+          <Button width="full" shape="square" disabled={disableActions} onClick={() => getChainID()} label="ChainID" />
+          <Button width="full" shape="square" disabled={disableActions} onClick={() => getNetwork()} label="Networks" />
+          <Button width="full" shape="square" disabled={disableActions} onClick={() => getBalance()} label="Get Balance" />
         </Group>
 
         <Group label="Signing">
-          <Button disabled={disableActions} onClick={() => signMessage()}>
-            Sign Message legacy
-          </Button>
-          <Button disabled={disableActions} onClick={() => signMessageEIP6492()}>
-            Sign Message EIP6492
-          </Button>
+          <Button
+            width="full"
+            shape="square"
+            disabled={disableActions}
+            onClick={() => signMessage()}
+            label="Sign Message legacy"
+          />
+          <Button
+            width="full"
+            shape="square"
+            disabled={disableActions}
+            onClick={() => signMessageEIP6492()}
+            label="Sign Message EIP6492"
+          />
         </Group>
 
         <Group label="Transactions">
-          <Button disabled={disableActions} onClick={() => sendETH()}>
-            Send ETH
-          </Button>
-          <Button disabled={disableActions} onClick={() => sendDAI()}>
-            Send DAI Tokens
-          </Button>
+          <Button width="full" shape="square" disabled={disableActions} onClick={() => sendETH()} label="Send ETH" />
+          <Button width="full" shape="square" disabled={disableActions} onClick={() => sendDAI()} label="Send DAI Tokens" />
         </Group>
       </>
     )
@@ -332,7 +331,8 @@ const App = () => {
           const connected = ready && account && chain && (!authenticationStatus || authenticationStatus === 'authenticated')
 
           return (
-            <div
+            <Box
+              marginBottom="4"
               {...(!ready && {
                 'aria-hidden': true,
                 style: {
@@ -342,57 +342,44 @@ const App = () => {
                 }
               })}
             >
-              {(() => {
-                if (!connected) {
-                  return (
-                    <Button style={{ marginBottom: '20px' }} onClick={openConnectModal} type="button">
-                      Connect Wallet
-                    </Button>
-                  )
-                }
+              {!connected ? (
+                <Button onClick={openConnectModal} type="button" label="Connect Wallet" />
+              ) : chain.unsupported ? (
+                <Button onClick={openChainModal} type="button" label="Wrong network" />
+              ) : (
+                <Box gap="2">
+                  <Button
+                    width="full"
+                    onClick={openChainModal}
+                    type="button"
+                    label={
+                      <Box gap="2" alignItems="center">
+                        {chain.hasIcon && <TokenImage size="sm" src={chain.iconUrl} />}
+                        <Text>{chain.name}</Text>
+                      </Box>
+                    }
+                  ></Button>
 
-                if (chain.unsupported) {
-                  return (
-                    <Button onClick={openChainModal} type="button">
-                      Wrong network
-                    </Button>
-                  )
-                }
-
-                return (
-                  <div style={{ display: 'flex', gap: 12 }}>
-                    <Button onClick={openChainModal} style={{ display: 'flex', alignItems: 'center' }} type="button">
-                      {chain.hasIcon && (
-                        <div
-                          style={{
-                            background: chain.iconBackground,
-                            width: 12,
-                            height: 12,
-                            borderRadius: 999,
-                            overflow: 'hidden',
-                            marginRight: 4
-                          }}
-                        >
-                          {chain.iconUrl && (
-                            <img alt={chain.name ?? 'Chain icon'} src={chain.iconUrl} style={{ width: 12, height: 12 }} />
-                          )}
-                        </div>
-                      )}
-                      {chain.name}
-                    </Button>
-
-                    <Button onClick={openAccountModal} type="button">
-                      {account.displayName}
-                      {account.displayBalance ? ` (${account.displayBalance})` : ''}
-                    </Button>
-                  </div>
-                )
-              })()}
-            </div>
+                  <Button
+                    width="full"
+                    onClick={openAccountModal}
+                    type="button"
+                    label={
+                      <Box gap="2" alignItems="center">
+                        <GradientAvatar size="sm" address={account.address} />
+                        {account.displayName}
+                      </Box>
+                    }
+                  />
+                </Box>
+              )}
+            </Box>
           )
         }}
       </ConnectButton.Custom>
+
       {getWalletActions()}
+
       <Console message={consoleMsg} loading={consoleLoading} />
     </Box>
   )

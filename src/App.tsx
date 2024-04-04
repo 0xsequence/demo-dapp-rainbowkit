@@ -1,4 +1,3 @@
-import React from 'react'
 import '@rainbow-me/rainbowkit/styles.css'
 
 import { ThemeProvider } from '@0xsequence/design-system'

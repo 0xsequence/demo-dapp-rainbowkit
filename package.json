@@ -36,8 +36,7 @@
     "react-dom": "^18.0.0",
     "typescript": "^5.0.4",
     "viem": "^1.3.0",
-    "wagmi": "^1.3.9",
-    "web-vitals": "^2.1.4"
+    "wagmi": "^1.3.9"
   },
   "devDependencies": {
     "@vanilla-extract/vite-plugin": "^3.7.1",

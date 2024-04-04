@@ -9,6 +9,7 @@
     "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
+    "typecheck": "tsc --noEmit",
     "clear:vite:cache": "rm -rf node_modules/.vite/",
     "link-sequence": "../sequence.js/scripts/pnpm-link.sh link",
     "unlink-sequence": "../sequence.js/scripts/pnpm-link.sh unlink"
@@ -20,25 +21,25 @@
     "@0xsequence/rainbowkit-plugin": "^2.1.7",
     "@0xsequence/utils": "^1.0.2",
     "@rainbow-me/rainbowkit": "^1.0.6",
-    "@types/node": "^16.11.22",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@vanilla-extract/css": "^1.9.3",
+    "@types/node": "^20.12.4",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "@vanilla-extract/css": "^1.14.2",
     "@wagmi/chains": "^0.1.14",
     "ethers": "^5.7.2",
     "framer-motion": "^9.0.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "typescript": "^5.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.4",
     "viem": "^1.3.0",
     "wagmi": "^1.3.9"
   },
   "devDependencies": {
-    "@vanilla-extract/vite-plugin": "^3.7.1",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.1.1",
-    "vite-plugin-svgr": "^2.4.0",
-    "vite-tsconfig-paths": "^4.0.5"
+    "@vanilla-extract/vite-plugin": "^4.0.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.8",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "eslintConfig": {
     "extends": [

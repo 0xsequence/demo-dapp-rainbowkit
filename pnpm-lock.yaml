@@ -38,9 +38,6 @@ dependencies:
   '@vanilla-extract/css':
     specifier: ^1.14.2
     version: 1.14.2
-  '@wagmi/chains':
-    specifier: ^1.8.0
-    version: 1.8.0(typescript@5.4.4)
   ethers:
     specifier: ^5.7.2
     version: 5.7.2
@@ -5227,17 +5224,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@wagmi/chains@1.8.0(typescript@5.4.4):
-    resolution: {integrity: sha512-UXo0GF0Cl0+neKC2KAmVAahv8L/5rACbFRRqkDvHMefzY6Fh7yzJd8F4GaGNNG3w4hj8eUB/E3+dEpaTYDN62w==}
-    peerDependencies:
-      typescript: '>=5.0.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      typescript: 5.4.4
-    dev: false
 
   /@wagmi/connectors@4.1.24(@types/react@18.2.74)(@wagmi/core@2.6.15)(react-dom@18.2.0)(react-native@0.73.6)(react@18.2.0)(typescript@5.4.4)(viem@2.9.9):
     resolution: {integrity: sha512-gFziI7E3m+ESJmEnsvlm/eMlboKwdfGqOOQIU068MoZ+ZcNxoLZe4gu8CqnrmG7ksdPtwG38prsMl96opZexIA==}

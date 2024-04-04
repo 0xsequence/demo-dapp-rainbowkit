@@ -8,7 +8,7 @@ import { sequenceWallet } from '@0xsequence/rainbowkit-plugin'
 import { metaMaskWallet, injectedWallet, rainbowWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
 
 import { WagmiProvider, createConfig, http } from 'wagmi'
-import { mainnet, polygon, optimism, arbitrum, sepolia } from '@wagmi/chains'
+import { mainnet, polygon, optimism, arbitrum, sepolia } from 'viem/chains'
 import { sequence } from '0xsequence'
 import Demo from './Demo'
 import { Transport } from 'viem'

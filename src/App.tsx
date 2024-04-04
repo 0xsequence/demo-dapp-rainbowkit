@@ -1,6 +1,7 @@
-import { ThemeProvider } from '@0xsequence/design-system'
 import '@0xsequence/design-system/styles.css'
+import '@rainbow-me/rainbowkit/styles.css'
 
+import { ThemeProvider } from '@0xsequence/design-system'
 import { RainbowKitProvider, connectorsForWallets } from '@rainbow-me/rainbowkit'
 
 import { sequenceWallet } from '@0xsequence/rainbowkit-plugin'

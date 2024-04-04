@@ -1,5 +1,3 @@
-import '@rainbow-me/rainbowkit/styles.css'
-
 import { ThemeProvider } from '@0xsequence/design-system'
 import '@0xsequence/design-system/styles.css'
 

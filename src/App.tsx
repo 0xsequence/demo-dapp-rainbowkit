@@ -8,13 +8,13 @@ import { sequenceWallet } from '@0xsequence/rainbowkit-plugin'
 import { metaMaskWallet, injectedWallet, rainbowWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets'
 
 import { configureChains, createConfig, WagmiConfig, Connector } from 'wagmi'
-import { mainnet, polygon, optimism, arbitrum, sepolia } from 'viem/chains'
+import { mainnet, polygon, polygonMumbai, optimism, arbitrum, sepolia, bsc, bscTestnet } from 'viem/chains'
 import { sequence } from '0xsequence'
 import Demo from './Demo'
 
 const App = () => {
   const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [mainnet, polygon, optimism, arbitrum, sepolia],
+    [mainnet, polygon, optimism, arbitrum, sepolia, bsc, bscTestnet, polygonMumbai],
     [
       chain => {
         const network = sequence.network.findNetworkConfig(sequence.network.allNetworks, chain.id)

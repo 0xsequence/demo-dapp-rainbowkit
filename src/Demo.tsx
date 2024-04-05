@@ -354,7 +354,8 @@ And that has made all the difference.`
                     type="button"
                     label={
                       <Box gap="2" alignItems="center">
-                        {chain.hasIcon && <TokenImage size="sm" src={chain.iconUrl} />}
+                        <TokenImage size="sm" src={chain.iconUrl} />
+                        {/* <TokenImage size="sm" src={`https://assets.sequence.info/images/networks/small/${chain.id}.webp`} /> */}
                         <Text>{chain.name}</Text>
                       </Box>
                     }

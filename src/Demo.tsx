@@ -1,4 +1,4 @@
-import { Box, Image, Text, Button, TokenImage, GradientAvatar } from '@0xsequence/design-system'
+import { Box, Image, Text, Button, TokenImage, GradientAvatar, Field } from '@0xsequence/design-system'
 import React, { useState, useEffect } from 'react'
 
 import logoUrl from './images/logo.svg'
@@ -348,30 +348,36 @@ And that has made all the difference.`
                 <Button onClick={openChainModal} type="button" label="Wrong network" />
               ) : (
                 <Box gap="2">
-                  <Button
-                    width="full"
-                    onClick={openChainModal}
-                    type="button"
-                    label={
-                      <Box gap="2" alignItems="center">
-                        <TokenImage size="sm" src={chain.iconUrl} />
-                        {/* <TokenImage size="sm" src={`https://assets.sequence.info/images/networks/small/${chain.id}.webp`} /> */}
-                        <Text>{chain.name}</Text>
-                      </Box>
-                    }
-                  ></Button>
+                  <Field label="Network" width="full">
+                    <Button
+                      width="full"
+                      onClick={openChainModal}
+                      type="button"
+                      label={
+                        <Box gap="2" alignItems="center">
+                          <TokenImage size="sm" src={chain.iconUrl} />
+                          {/* <TokenImage size="sm" src={`https://assets.sequence.info/images/networks/small/${chain.id}.webp`} /> */}
+                          <Text>{chain.name}</Text>
+                        </Box>
+                      }
+                      data-testid="network-button"
+                    ></Button>
+                  </Field>
 
-                  <Button
-                    width="full"
-                    onClick={openAccountModal}
-                    type="button"
-                    label={
-                      <Box gap="2" alignItems="center">
-                        <GradientAvatar size="sm" address={account.address} />
-                        {account.displayName}
-                      </Box>
-                    }
-                  />
+                  <Field label="Account" width="full">
+                    <Button
+                      width="full"
+                      onClick={openAccountModal}
+                      type="button"
+                      label={
+                        <Box gap="2" alignItems="center">
+                          <GradientAvatar size="sm" address={account.address} />
+                          {account.displayName}
+                        </Box>
+                      }
+                      data-testid="account-button"
+                    />
+                  </Field>
                 </Box>
               )}
             </Box>

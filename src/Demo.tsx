@@ -348,7 +348,7 @@ And that has made all the difference.`
                 <Button onClick={openChainModal} type="button" label="Wrong network" />
               ) : (
                 <Box gap="2">
-                  <Field label="Network" width="full">
+                  <Field label="Network" width="full" data-testid={`rk-selected-chain-option-${chain.id}`}>
                     <Button
                       width="full"
                       onClick={openChainModal}
@@ -357,7 +357,12 @@ And that has made all the difference.`
                         <Box gap="2" alignItems="center">
                           <TokenImage size="sm" src={chain.iconUrl} />
                           {/* <TokenImage size="sm" src={`https://assets.sequence.info/images/networks/small/${chain.id}.webp`} /> */}
-                          <Text>{chain.name}</Text>
+                          <Text>
+                            {chain.name}{' '}
+                            <Text variant="small" color="text50">
+                              {chain.id}
+                            </Text>
+                          </Text>
                         </Box>
                       }
                       data-testid="network-button"

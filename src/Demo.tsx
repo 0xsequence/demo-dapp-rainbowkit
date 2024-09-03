@@ -127,7 +127,7 @@ const App = () => {
 
       // get networkRpcUrl from walletClient, or set it yourself
       const networkRpcUrl = walletClient.chain.rpcUrls.default.http[0]
-      const rpcProvider = new ethers.providers.JsonRpcProvider(networkRpcUrl)
+      const rpcProvider = new ethers.JsonRpcProvider(networkRpcUrl)
 
       // We use the sequence.utils.isValidMessageSignature method to verify signatures
       // which works on Metamask, WalletConnect, Sequence, and any EOA / Smart wallet :)
@@ -241,7 +241,7 @@ And that has made all the difference.`
       resetConsole()
       const toAddress = ethers.Wallet.createRandom().address
 
-      const amount = ethers.utils.parseUnits('0.0123', 18)
+      const amount = ethers.parseUnits('0.0123', 18)
 
       const daiContractAddress = '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063' // (DAI address on Polygon)
 
@@ -252,9 +252,9 @@ And that has made all the difference.`
         account,
         to: daiContractAddress,
         value: 0n,
-        data: new ethers.utils.Interface(ERC_20_ABI).encodeFunctionData('transfer', [
+        data: new ethers.Interface(ERC_20_ABI).encodeFunctionData('transfer', [
           toAddress,
-          amount.toHexString()
+          ethers.toQuantity(amount)
         ]) as `0x${string}`
       })
 

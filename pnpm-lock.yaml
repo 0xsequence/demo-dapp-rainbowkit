@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))
       '@0xsequence/rainbowkit-plugin':
-        specifier: ^2.1.7
-        version: 2.1.7(0xsequence@2.0.0(bufferutil@4.0.8)(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10))(@rainbow-me/rainbowkit@1.0.6(@types/react@18.2.74)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))))(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10)))
+        specifier: ^3.0.0
+        version: 3.0.0(0xsequence@2.0.0(bufferutil@4.0.8)(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10))(@rainbow-me/rainbowkit@1.0.6(@types/react@18.2.74)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))))(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10)))
       '@0xsequence/utils':
         specifier: ^2.0.0
         version: 2.0.0(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))
@@ -138,14 +138,14 @@ packages:
     peerDependencies:
       ethers: '>=6'
 
-  '@0xsequence/rainbowkit-plugin@2.1.7':
-    resolution: {integrity: sha512-okjrSgRgRWu3EHd1Xfm5usZcFJpNXz2ZhgO1cUTF7wUxt6E2K2ykAu6NkMY9W83yHJP2zUdXfiv2Lp0xVSDj/A==}
+  '@0xsequence/rainbowkit-plugin@3.0.0':
+    resolution: {integrity: sha512-AFqJFh3NpEfFZh3UV+udpqdqc6sBhFbabLuWuov+mF54sBC90AX6lk7d+q34OFowemH9AydIuxE2EZBnyOhKjQ==}
     peerDependencies:
-      0xsequence: '>=1.1.10 <1.2.0'
-      '@rainbow-me/rainbowkit': '>=1.0.0'
-      ethers: '>=5.5'
-      viem: '>=0.3.37'
-      wagmi: '>=1.0.0'
+      0xsequence: '>= 2.0.0'
+      '@rainbow-me/rainbowkit': '>= 1.0.0'
+      ethers: '>= 6.13.0'
+      viem: '>= 0.3.37'
+      wagmi: '>= 1.0.0'
 
   '@0xsequence/relayer@2.0.0':
     resolution: {integrity: sha512-cU7Qg4W/Fqfsw18VHWUmFCiGMKy5UiVd73pBCy7zer3vo9M7CIXC7H67FL4MQYRH0r7JJd19ZHAq35ms7tGzGQ==}
@@ -3363,7 +3363,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@0xsequence/rainbowkit-plugin@2.1.7(0xsequence@2.0.0(bufferutil@4.0.8)(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10))(@rainbow-me/rainbowkit@1.0.6(@types/react@18.2.74)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))))(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10)))':
+  '@0xsequence/rainbowkit-plugin@3.0.0(0xsequence@2.0.0(bufferutil@4.0.8)(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10))(@rainbow-me/rainbowkit@1.0.6(@types/react@18.2.74)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))))(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10)))':
     dependencies:
       0xsequence: 2.0.0(bufferutil@4.0.8)(ethers@6.13.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)
       '@rainbow-me/rainbowkit': 1.0.6(@types/react@18.2.74)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10))(wagmi@1.3.9(@types/react@18.2.74)(bufferutil@4.0.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)(utf-8-validate@5.0.10)(viem@1.3.0(bufferutil@4.0.8)(typescript@5.4.4)(utf-8-validate@5.0.10)))

@@ -1,6 +1,8 @@
 import '@0xsequence/design-system/styles.css'
 import '@rainbow-me/rainbowkit/styles.css'
 
+import './global.css'
+
 import { ThemeProvider } from '@0xsequence/design-system'
 import { Chain, RainbowKitProvider, connectorsForWallets } from '@rainbow-me/rainbowkit'
 

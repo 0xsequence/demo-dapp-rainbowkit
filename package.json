@@ -15,11 +15,11 @@
     "unlink-sequence": "../sequence.js/scripts/pnpm-link.sh unlink"
   },
   "dependencies": {
-    "0xsequence": "^2.0.0",
+    "0xsequence": "^2.0.1",
     "@0xsequence/design-system": "^1.7.6",
     "@0xsequence/ethauth": "^1.0.0",
     "@0xsequence/rainbowkit-plugin": "^3.0.0",
-    "@0xsequence/utils": "^2.0.0",
+    "@0xsequence/utils": "^2.0.1",
     "@rainbow-me/rainbowkit": "^1.0.6",
     "@types/node": "^20.12.4",
     "@types/react": "^18.2.74",

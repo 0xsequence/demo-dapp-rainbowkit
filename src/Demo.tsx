@@ -125,8 +125,9 @@ const App = () => {
       console.log('signature:', sig)
       addNewConsoleLine(`signature: ${sig}`)
 
-      // get networkRpcUrl from walletClient, or set it yourself
-      const networkRpcUrl = walletClient.chain.rpcUrls.default.http[0]
+      const chainId = sequence.network.ChainId.MAINNET
+      const name = sequence.network.networks[chainId].name
+      const networkRpcUrl = sequence.network.nodesURL(name)
       const rpcProvider = new ethers.JsonRpcProvider(networkRpcUrl)
 
       // We use the sequence.utils.isValidMessageSignature method to verify signatures

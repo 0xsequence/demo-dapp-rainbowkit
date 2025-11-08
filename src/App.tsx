@@ -17,7 +17,7 @@ import Demo from './Demo'
 const arbitrumSepolia: Chain = {
   id: 421614,
   name: 'Arbitrum Sepolia',
-  network: 'aribtrum-sepolia',
+  network: 'arbitrum-sepolia',
   testnet: true,
   nativeCurrency: {
     name: 'Arbitrum Sepolia Ether',

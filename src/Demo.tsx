@@ -125,7 +125,7 @@ const App = () => {
       console.log('signature:', sig)
       addNewConsoleLine(`signature: ${sig}`)
 
-      const chainId = sequence.network.ChainId.MAINNET
+      const chainId = await walletClient.getChainId()
       const name = sequence.network.networks[chainId].name
       const networkRpcUrl = sequence.network.nodesURL(name)
       const rpcProvider = new ethers.JsonRpcProvider(networkRpcUrl)
